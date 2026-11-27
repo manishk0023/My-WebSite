@@ -1,0 +1,390 @@
+/* Google Font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+:root {
+  --bg: #0b1020;
+  --card: #151d32;
+  --primary: #8b7bff;
+  --text: #f4f5ff;
+  --muted: #a8b0c5;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 85px;
+}
+body {
+    background: var(--bg);
+    color: var;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+/* Navbar */
+
+header {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 16, 32, 95);
+    border-bottom: 1px solid #6275b3;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flow-root;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.logo span, .section-title span
+.hero h1 span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color:  var(--muted);
+    transition: 3s
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+.menu-btn {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 55px);
+  line-height: 1.2;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.hero h2 span {
+  color: var(--primary);
+}
+
+.hero-content > p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: white;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: .85;
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+.avatar {
+  width: 260px;
+  height: 260px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b7bff, #252c55);
+  font-size: 75px;
+  font-weight: 800;
+  box-shadow: 0 0 60px #8b7bff35;
+}
+
+.image-label {
+  margin-top: 15px;
+  color: var(--muted);
+}
+
+/* Common sections */
+.section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+/* About */
+.about-card, .contact-card {
+  background: var(--card);
+  padding: 30px;
+  border: 1px solid #26304b;
+  border-radius: 14px;
+}
+
+.about-card p {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skill-card {
+  background: var(--card);
+  border: 1px solid #26304b;
+  border-radius: 12px;
+  text-align: center;
+  padding: 25px 10px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.skill-card:hover, .project-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid #26304b;
+  padding: 27px;
+  border-radius: 14px;
+  transition: .3s;
+}
+
+.project-icon {
+  color: var(--primary);
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.project-card h3 {
+  margin: 12px 0;
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+.project-card .tech {
+  margin: 18px 0;
+  color: var(--primary);
+  font-size: 13px;
+}
+
+.project-link {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Education */
+.education-card {
+  background: var(--card);
+  padding: 22px;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+}
+
+.education-card p {
+  color: var(--muted);
+}
+
+/* Contact */
+.contact-card > p {
+  color: var(--muted);
+}
+
+.contact-card > a {
+  display: inline-block;
+  color: var(--primary);
+  margin: 12px 0 22px;
+}
+
+#contact-form {
+  display: grid;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  background: #0b1020;
+  color: white;
+  border: 1px solid #303b58;
+  border-radius: 8px;
+  font: inherit;
+}
+
+#contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+#form-status {
+  margin-top: 12px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  color: var(--muted);
+  border-top: 1px solid #26304b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: var(--card);
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 5%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 55px;
+  }
+
+  .hero-content > p:not(.eyebrow) {
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .avatar {
+    width: 190px;
+    height: 190px;
+    font-size: 55px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
